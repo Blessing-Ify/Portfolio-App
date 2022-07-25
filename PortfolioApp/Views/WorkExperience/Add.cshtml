@@ -1,0 +1,42 @@
+﻿@model PortfolioApp.Models.WorkExperience
+
+<h4>WorkExperience</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Add">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="WorkExperiences" class="control-label"></label>
+                <input asp-for="WorkExperiences" class="form-control" />
+                <span asp-validation-for="WorkExperiences" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="Role" class="control-label"></label>
+                <input asp-for="Role" class="form-control" />
+                <span asp-validation-for="Role" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="Location" class="control-label"></label>
+                <input asp-for="Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="Years" class="control-label"></label>
+                <input asp-for="Years" class="form-control" />
+                <span asp-validation-for="Years" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="IndexE">Back to Experiences</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<PortfolioApp.Models.Skill>
+
+@{
+    ViewData["Title"] = "IndexS";
+}
+
+<h1>SKILLS</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Skills)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.Skills)
+            </td>
+            <td>
+                <a asp-action="Update" asp-route-id="@item.SkillId">Edit</a> |
+                @*<a asp-action="Details" asp-route-id="@item.SkillId">Details</a> |*@
+                <a asp-action="Delete" asp-route-id="@item.SkillId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<p>
+    <button><a asp-action="Add">Create New</a></button>
+</p>

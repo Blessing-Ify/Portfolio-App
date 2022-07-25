@@ -1,0 +1,74 @@
+﻿@model IEnumerable<PortfolioApp.Models.WorkExperience>
+
+@{
+    ViewData["Title"] = "IndexE";
+}
+
+
+<div class="myContainer">
+
+    <div class="title">
+        <style>
+            h2 {
+                text-align: center;
+            }</style>
+        <h2 text-align: center;>My Experiences</h2>
+    </div>
+
+     @foreach  (var item in Model)
+        {
+          <div class="card mb-3" style="max-width: 350px;">
+        <div class="w3-panel w3-card w3-yellow"></div>
+      <div class="card-body">
+        <h3 class="card-title"> Experience: @item.WorkExperiences</h3>
+        <p class="card-text">Role: @item.Role</p>
+        <p class="card-text">Location: @item.Location</p>
+        <p class="card-text">Year: @item.Years</p>
+      </div>
+      </div>
+}
+    </div>
+@*<h1>EXPERIENCES</h1>*@
+@*
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkExperiences)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Role)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Years)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkExperiences)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Years)
+            </td>
+       </tr>
+}
+    </tbody>
+</table>*@
+<div class="container">
+                 <form method="get" asp-action="Contact" asp-controller="Portfolio">
+                     <button type="submit">Contact Me</button>
+                 </form>
+             </div>

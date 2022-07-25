@@ -1,0 +1,54 @@
+﻿@model IEnumerable<PortfolioApp.Models.WorkExperience>
+
+@{
+    ViewData["Title"] = "IndexE";
+}
+
+<h1>EXPERIENCES</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkExperiences)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Role)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Years)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkExperiences)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Years)
+            </td>
+            
+            <td>
+                 <button><a asp-action="Update" asp-route-id="@item.WorkExperienceId">Edit</a></button> |
+                @*<a asp-action="Details" asp-route-id="@item.ProjectId">Details</a> |*@
+                <button><a asp-action="Delete" asp-route-id="@item.WorkExperienceId">Delete</a></button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<p>
+    <button><a asp-action="Add">Create New</a></button>
+</p>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<PortfolioApp.Models.Skill>
+
+@{
+    ViewData["Title"] = "IndexS";
+}
+
+<div class="myContainer">
+
+    <div class="title">
+        <style>
+            h2 {
+                text-align: center;
+            }</style>
+        <h2 text-align: center;>My Skills</h2>
+    </div>
+
+     @foreach  (var item in Model)
+        {
+          <div class="card mb-3" style="max-width: 200px;">
+        <div class="w3-panel w3-card w3-red"></div>
+      <div class="card-body">
+        <h3 class="card-title">@item.Skills</h3>
+        </div>
+      </div>
+}
+    </div>
+@*<h1>SKILLS</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Skills)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.Skills)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@
+<div class="container">
+                 <form method="get" asp-action="ExperienceIndex" asp-controller="Portfolio">
+                     <button type="submit">Experiences</button>
+                 </form>
+             </div>

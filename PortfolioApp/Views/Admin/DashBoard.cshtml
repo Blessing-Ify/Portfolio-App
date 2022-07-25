@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> SignInManager
+@*@model PortfolioApp.ViewModels.DashboardViewModel*@
+
+@*
+<a type="button" class="btn btn-primary" asp-area="" asp-controller="Project" asp-action="ProjectIndex">My Project</a>
+<a type="button" class="btn btn-primary" asp-area="" asp-controller="Project" asp-action="Add">Add Project</a>
+<a type="button" class="btn btn-primary" asp-area="" asp-controller="WorkExperience" asp-action="Add">Add Experience</a>
+<a type="button" class="btn btn-primary" asp-area="" asp-controller="Skill" asp-action="Add">Add Skill</a>
+*@
+@*<p><a type="button" class="btn btn-primary" asp-area="" asp-controller="Project" asp-action="IndexP">Projects</a></p>
+
+<p><a type="button" class="btn btn-primary" asp-area="" asp-controller="Skill" asp-action="IndexS">Skills</a></p>
+
+<p><a type="button" class="btn btn-primary" asp-area="" asp-controller="WorkExperience" asp-action="IndexE">Experiences</a></p>*@
+
+
+@{
+    ViewData["Title"] = "DashBoard Page";
+}
+            <div class="container">
+
+      <div class="row">
+        <div class="col-md-2">
+            <h4>Dashboard</h4>
+                 <p><a asp-area="" asp-controller="Project" asp-action="IndexP">Project</a></p>
+                 <p><a asp-area="" asp-controller="Skill" asp-action="IndexS">Skills</a></p>
+                 <p><a asp-area="" asp-controller="WorkExperience" asp-action="IndexE">Experiences</a></p>
+
+            </div>
+        <div class="col-md-10">
+            <img style="width:600px; height:800px;" src = "image/logo.png" />
+        </div>
+    </div>
+        </div>
+         
+         
+

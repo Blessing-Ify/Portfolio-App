@@ -1,0 +1,33 @@
+﻿@model LoginViewModel //we did this because in the controller, we are returning this LoginViewModel in this view
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+@*@{
+    var returnUrl = ViewBag.IsNullOrWhiteSpace(ViewBag.ReturnUrl) ? "/" : ViewBag.ReturnUrl;
+    }*@
+<div style="text-align:center; padding-top:50px">
+    <h1>Login Here</h1>
+    <div style="padding-top: 15px">
+        <form method="post" asp-action="Login" asp-controller="Account">
+
+            <div asp-validation-summary="ModelOnly"></div>
+            <p>
+                <span asp-validation-for="Email"></span>
+                <input asp-for="Email" placeholder="Enter your email" /> @*we want to store this inputs to our database hence the use of for to direct us to what field eg email*@
+            </p>
+            <p>
+                <span asp-validation-for="Password"></span>
+                <input asp-for="Password" placeholder="Enter your password" />
+            </p>
+            <div>
+                <input asp-for="RememberMe" /> Remember Me
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+        </form>
+    </div>
+    <div style="padding-top: 15px">
+        <p>Don't have an account?</p>
+        <p>Please register <a asp-action="CreateUser" asp-controller="User">Here</a></p>
+    </div>
+</div>

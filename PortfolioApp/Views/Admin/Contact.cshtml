@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Contact Page";
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <div style="text-align:center; padding-top:100px;">
+            <h3>Let's get in Touch</h3>
+            <p>
+                Feel free to get in touch with me.
+                I am always open to discussing new projects,
+                creative ideas, or opportunities to be part of your visions.
+            </p>
+        </div>
+
+    </div>
+    <div class="col-md-8">
+        <div style="text-align:center; padding-top:40px;">
+
+            <form class="mt-5 container" method="post" asp-action="Index" target="_blank">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input class="form-control" type="text" />
+                </div>
+                <div>
+                    <label class="form-label">Email</label>
+                    <input class="form-control" type="email" />
+                </div>
+                <div>
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control"></textarea>
+                </div>
+                <br/>
+                <button type="submit" class="btn btn-primary">SUBMIT</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="social">
+        <a href="www.facebook.com/ugwuja.ifunanya"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="www.linkedin.com/in/ifunanya-ugwuja-39025419b"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p class="end">CopyRight By Ugwuja Ifunanya</p>
+</footer>
+

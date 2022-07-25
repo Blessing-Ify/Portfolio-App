@@ -1,0 +1,72 @@
+﻿@model IEnumerable<PortfolioApp.Models.Project>
+
+@{
+    ViewData["Title"] = "ProjectIndex";
+}
+
+
+
+@*<h1>PROJECTS</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@
+
+<div class="myContainer">
+
+    <div class="title">
+        <style>
+            h2 {
+                text-align: center;
+            }</style>
+        <h2 text-align: center;>My Projects</h2>
+    </div>
+
+     @foreach  (var item in Model)
+        {
+          <div class="card mb-3" style="max-width: 350px;">
+        <div class="w3-panel w3-card w3-yellow"></div>
+      <div class="card-body">
+        <h3 class="card-title">Title: @item.Title</h3>
+        <p class="card-text">Description: @item.Description</p>
+        <p class="card-text"><small class="text-muted"> Date Created: @item.Date</small></p>
+        <button class="btn btn-outline-primary mt-4" type="submit"><a href="https://github.com/Blessing-Ify" target="_blank">visit</a></button>
+      </div>
+      </div>
+}
+    </div>
+   
+
+  <div class="container">
+                 <form method="get" asp-action="SkillIndex" asp-controller="Portfolio">
+                     <button type="submit">Skills</button>
+                 </form>
+             </div>
